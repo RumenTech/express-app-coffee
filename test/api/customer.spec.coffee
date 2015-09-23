@@ -78,3 +78,13 @@ describe "Customers API", ->
           .to.have.property "name"
           .equals "john smith"
         done()
+
+  it "should return 404", (done) ->
+    server
+      .get "/random"
+      .expect 404
+      .end (err, res) ->
+        expect(res)
+          .to.have.property "status"
+          .equals 404
+        done()
