@@ -20,7 +20,7 @@ customerSchema = new Schema(
     virtuals: true
 )
 
-fields = "name email barber"
+fields = "name email barber".split(" ")
 
 customerSchema.methods.modify = (data, cb) ->
   _
