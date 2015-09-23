@@ -5,7 +5,7 @@
   "main": "server.coffee",
   "scripts": {
     "start": "coffee server.coffee",
-    "test": "mocha test/**/*.spec.coffee"
+    "test": "mocha --compilers coffee:coffee-script/register test/**/*.spec.coffee"
   },
   "repository": {
     "type": "git",
