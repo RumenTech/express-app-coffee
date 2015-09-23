@@ -4,7 +4,8 @@
   "description": "Sample Express app in CoffeeScript",
   "main": "server.coffee",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "coffee server.coffee",
+    "test": "mocha test/**/*.spec.coffee"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,10 @@
     "express": "~4.13.3",
     "lodash": "~3.10.1",
     "mongoose": "~4.1.8"
+  },
+  "devDependencies": {
+    "chai": "~3.3.0",
+    "supertest": "~1.1.0",
+    "mocha": "~2.3.3"
   }
 }
