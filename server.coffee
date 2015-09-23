@@ -14,6 +14,8 @@ app.use bodyParser.urlencoded(extended: "true") # parse application/x-www-form-u
 app.use bodyParser.json() # parse application/json
 app.use methodOverride()
 
+require(serverRoot + "/routes/setup") app # set up routes for the app
+
 app.set "port", process.env.PORT or config.PORT
 app.listen app.get("port"), "0.0.0.0", ->
   console.log "App listening on port #{app.get("port")}"
