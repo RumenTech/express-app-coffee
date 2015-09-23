@@ -1,0 +1,8 @@
+# Ignore MongoDB target folder
+mongodb/*
+
+# Ignore IDE settings folder
+.idea/*
+
+# Ignore dependencies
+node_modules/*
