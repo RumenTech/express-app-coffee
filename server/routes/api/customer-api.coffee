@@ -49,3 +49,14 @@ module.exports = ->
           res.json doc
         .catch (err) ->
           next err
+
+    .delete "/:customerId", (req, res, next) ->
+      customerId = req.params.customerId
+
+      Q.nbind(Customer.findById, Customer)(customerId)
+        .then (doc) ->
+          Q.nbind(doc.remove, doc)()
+        .then (doc) ->
+          res.json doc
+        .catch (err) ->
+          next err
