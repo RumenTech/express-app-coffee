@@ -2,6 +2,20 @@ router = require("express").Router()
 mongoose = require("mongoose")
 Q = require("q")
 
+##
+# API implementation for customers CRUD operation
+#
+#  Method | URL                                       | Description
+#  -----------------------------------------------------------------
+#     GET | /api/customers                            | Get all of the customers
+#         | /api/customers?name=john                  | Get a customer specified by name
+#         | /api/customers?email=example@gmail.com    | Get a customer specified by email
+#         | /api/customers/:customer_id               | Get a customer specified by unique ID
+#    POST | /api/customers                            | Create a single customer
+#     PUT | /api/customers/:customer_id               | Update a single customer specified by unique ID
+#  DELETE | /api/customers/:customer_id               | Delete a single customer specified by unique ID
+# -----------------------------------------------------------------
+##
 
 module.exports = ->
 
