@@ -2,6 +2,7 @@ mongoose = require("mongoose")
 
 serverRoot = "./"
 config = require(serverRoot + "config")
+models = require(serverRoot + "models") # Load mongoose models
 
 mongoose.connect config.db
 
